@@ -1,12 +1,14 @@
 let canvas = document.querySelector("canvas")
 let c = canvas.getContext("2d")
-
-let b1 = new Body(300,300,20,1)
-let b2 = new Body(400,400,20,1)
-c.fillRect(0,0,400,400)
+canvas.height = innerHeight
+canvas.width = innerWidth
+console.log("hello")
+let b1 = new Body(100,100,25,1)
+let b2 = new Body(250,250,25,1)
 function animate(){
   requestAnimationFrame(animate)
-  Body.bodies.forEach(b => b.draw(c))
+  b1.draw(c)
+  b2.draw(c)
 }
 
 animate()
